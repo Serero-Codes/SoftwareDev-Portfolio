@@ -43,10 +43,22 @@ const Skills = () => {
             <span className="text-[#B3CFE5] text-sm font-semibold uppercase tracking-widest">{cat}</span>
             <div className="flex-1 h-[1px] bg-[#1A3D63]" />
           </div>
-          <div className="flex flex-wrap gap-8 justify-start">
+
+          <div className="hidden lg:flex flex-wrap gap-8 justify-start">
             {technologies.filter((t) => t.category === cat).map((tech, i) => (
               <TechCard key={tech.name} tech={tech} index={i} />
             ))}
+          </div>
+
+          <div className="lg:hidden mt-4 grid gap-3">
+            <div className="rounded-2xl border border-[#4A7FA7]/50 bg-[#0A1931]/90 p-4">
+              <p className="text-[#F6FAFD] font-semibold text-sm uppercase tracking-widest mb-3">{cat}</p>
+              <div className="grid gap-2 text-[#B3CFE5] text-sm leading-relaxed">
+                {technologies.filter((t) => t.category === cat).map((tech) => (
+                  <p key={tech.name} className="inline-block">• {tech.name}</p>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       ))}

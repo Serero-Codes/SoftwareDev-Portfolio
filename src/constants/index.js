@@ -29,8 +29,9 @@ export const technologies = [
   { name: "Git", color: "#4A7FA7", category: "Tool" },
   { name: "Machine Learning", color: "#B3CFE5", category: "AI/ML" },
   { name: "REST APIs", color: "#F6FAFD", category: "Architecture" },
-  { name: "Node.js", color: "#4A7FA7", category: "Runtime" },
+  { name: "SQL Server Management Studio", color: "#B3CFE5", category: "Database" },
   { name: "Azure", color: "#B3CFE5", category: "Cloud" },
+  { name: "AWS", color: "#4A7FA7", category: "Cloud" },
 ];
 
 export const experiences = [
