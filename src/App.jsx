@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 const About = lazy(() => import("./components/About"));
 const Experience = lazy(() => import("./components/Experience"));
 const Skills = lazy(() => import("./components/Skills"));
+const Certifications = lazy(() => import("./components/Certifications"));
 const Projects = lazy(() => import("./components/Projects"));
 const Contact = lazy(() => import("./components/Contact"));
 
@@ -17,19 +18,21 @@ const SectionLoader = () => (
 
 function App() {
   return (
-    <div className="relative bg-[#050816] min-h-screen">
+    <div className="relative bg-black min-h-screen">
       <Navbar />
       <main>
         <Hero />
         <div className="relative z-0">
           <Suspense fallback={<SectionLoader />}><About /></Suspense>
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-[#915eff]/40 to-transparent my-4" />
+          <div className="w-full h-px bg-[#1A3D63] my-4" />
           <Suspense fallback={<SectionLoader />}><Experience /></Suspense>
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-[#00d4ff]/30 to-transparent my-4" />
+          <div className="w-full h-px bg-[#1A3D63] my-4" />
           <Suspense fallback={<SectionLoader />}><Skills /></Suspense>
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-[#915eff]/40 to-transparent my-4" />
+          <div className="w-full h-px bg-[#1A3D63] my-4" />
+          <Suspense fallback={<SectionLoader />}><Certifications /></Suspense>
+          <div className="w-full h-px bg-[#1A3D63] my-4" />
           <Suspense fallback={<SectionLoader />}><Projects /></Suspense>
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-[#00d4ff]/30 to-transparent my-4" />
+          <div className="w-full h-px bg-[#1A3D63] my-4" />
           <Suspense fallback={<SectionLoader />}><Contact /></Suspense>
         </div>
       </main>

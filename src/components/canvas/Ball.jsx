@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Decal, Float, OrbitControls, useTexture } from "@react-three/drei";
-import * as THREE from "three";
+import { Float, OrbitControls } from "@react-three/drei";
 
 function Ball({ color }) {
   return (
