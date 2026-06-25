@@ -1,0 +1,9 @@
+services:
+  - type: static
+    name: serero-portfolio
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - path: /*
+        destination: /index.html
+        match: miss
