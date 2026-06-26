@@ -106,6 +106,64 @@ export const certifications = [
 
 export const projects = [
   {
+    name: "Smart Ticket Management",
+    description:
+      "A freelancing business website for managing support tickets, service bookings, and client communications through a professional booking portal.",
+    tags: [
+      { name: "HTML", color: "blue-text-gradient" },
+      { name: "CSS", color: "green-text-gradient" },
+      { name: "JavaScript", color: "pink-text-gradient" },
+      { name: "Tailwind", color: "blue-text-gradient" },
+      { name: "SQL", color: "green-text-gradient" },
+    ],
+    previewColor: "#0A1931",
+    source_code_link: "https://github.com/Serero-Codes/Smart-Ticket-Management",
+    live_demo_link: "https://smart-ticket-management-q5zg.onrender.com",
+  },
+  {
+    name: "Employ AI",
+    description:
+      "An AI-powered employment platform that automates candidate matching, skill ranking, and recruitment workflows for smarter hiring.",
+    tags: [
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "Flask", color: "green-text-gradient" },
+      { name: "AI", color: "pink-text-gradient" },
+      { name: "PostgreSQL", color: "blue-text-gradient" },
+    ],
+    previewColor: "#1A3D63",
+    source_code_link: "https://github.com/Serero-Codes/Employ_AI",
+    live_demo_link: "https://employ-ai.onrender.com",
+  },
+  {
+    name: "StudyMate",
+    description:
+      "A hackathon collaboration platform built to accelerate team development, rapid prototyping, and workflow automation during the Kion challenge.",
+    tags: [
+      { name: "React", color: "blue-text-gradient" },
+      { name: "JavaScript", color: "green-text-gradient" },
+      { name: "Node.js", color: "pink-text-gradient" },
+      { name: "PostgreSQL", color: "blue-text-gradient" },
+    ],
+    previewColor: "#4A7FA7",
+    source_code_link: "https://github.com/ChocTrippleB/dev_dynamo",
+    live_demo_link: null,
+  },
+  {
+    name: "Employee Management System",
+    description:
+      "A compact employee management system for administering staff and departments with ASP.NET Core, Entity Framework migrations, and SQL Server storage.",
+    tags: [
+      { name: "C#", color: "blue-text-gradient" },
+      { name: "ASP.NET Core", color: "green-text-gradient" },
+      { name: "Entity Framework", color: "pink-text-gradient" },
+      { name: "SQL Server", color: "blue-text-gradient" },
+    ],
+    previewColor: "#B3CFE5",
+    source_code_link: "https://github.com/Serero-Codes/EmployeeManagementSystem",
+    live_demo_link: null,
+  },
+/*
+  {
     name: "C# MVC Web Application",
     description:
       "A full-stack web application built with ASP.NET Core MVC demonstrating CRUD operations, authentication, and RESTful API design. Features responsive UI, SQL Server backend, and Entity Framework ORM.",
@@ -157,4 +215,5 @@ export const projects = [
     source_code_link: "https://github.com/Serero-Codes",
     live_demo_link: null,
   },
+*/
 ];

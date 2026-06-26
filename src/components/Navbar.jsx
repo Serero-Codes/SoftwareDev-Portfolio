@@ -13,6 +13,22 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open and keep nav background stable
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+      // use the landing-page (transparent) nav style while menu is open
+      setScrolled(false);
+    } else {
+      document.body.style.overflow = "";
+      // allow scroll state to update normally after closing
+      setScrolled(window.scrollY > 50);
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   const handleNavClick = (id) => {
     setActive(id);
     setMenuOpen(false);

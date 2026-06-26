@@ -20,10 +20,25 @@ function ProjectModal({ project, onClose }) {
               <span key={tag.name} className={`text-xs font-medium px-3 py-1 rounded-full bg-[#1A3D63] border border-[#4A7FA7]/50 ${tag.color}`}>#{tag.name}</span>
             ))}
           </div>
-          <div className="flex gap-4">
-            <a href={project.source_code_link} target="_blank" rel="noopener noreferrer" className="flex-1 text-center py-3 rounded-xl bg-[#4A7FA7] text-[#F6FAFD] text-sm font-semibold hover:bg-[#1A3D63] transition-colors">
-              View Source Code
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <a
+              href={project.live_demo_link || project.source_code_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center py-3 rounded-xl bg-[#4A7FA7] text-[#F6FAFD] text-sm font-semibold hover:bg-[#1A3D63] transition-colors"
+            >
+              {project.live_demo_link ? "View Application" : "View Source Code"}
             </a>
+            {project.live_demo_link && (
+              <a
+                href={project.source_code_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center py-3 rounded-xl border border-[#B3CFE5]/50 text-[#B3CFE5] text-sm hover:bg-[#1A3D63] transition-colors"
+              >
+                View Source Code
+              </a>
+            )}
             <button onClick={onClose} className="px-5 py-3 rounded-xl border border-[#B3CFE5]/50 text-[#B3CFE5] text-sm hover:bg-[#1A3D63] transition-colors">
               Close
             </button>
@@ -52,7 +67,7 @@ function ProjectCard({ project, index, onClick }) {
         </div>
         <div className="flex items-center justify-between pt-3 border-t border-[#4A7FA7]/40">
           <span className="text-[#B3CFE5] text-xs font-semibold group-hover:text-[#F6FAFD] transition-colors">View Details</span>
-          <a href={project.source_code_link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} aria-label="GitHub" className="text-[#B3CFE5] hover:text-[#F6FAFD] transition-colors text-sm">
+          <a href={project.source_code_link} target="_blank" rel="https://github.com/Serero-Codes/Smart-Cv-Builder" onClick={(e) => e.stopPropagation()} aria-label="GitHub" className="text-[#B3CFE5] hover:text-[#F6FAFD] transition-colors text-sm">
             GitHub
           </a>
         </div>

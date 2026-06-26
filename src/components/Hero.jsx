@@ -128,13 +128,6 @@ const Hero = () => {
             >
               View My Work
             </button>
-            <a
-              href="/cv.pdf"
-              download
-              className="px-7 py-3.5 rounded-full border border-[#4A7FA7] text-[#B3CFE5] font-semibold text-sm hover:bg-[#0A1931] hover:scale-105 transition-all duration-200"
-            >
-              Download CV
-            </a>
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               className="px-7 py-3.5 rounded-full border border-[#B3CFE5]/50 text-[#F6FAFD] font-semibold text-sm hover:bg-[#1A3D63] hover:scale-105 transition-all duration-200"
