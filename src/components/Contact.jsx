@@ -11,7 +11,7 @@ const CONTACT_LINKS = [
   { label: "GitHub", value: "Serero-Codes", href: "https://github.com/Serero-Codes" },
   { label: "Email", value: "sereroemmanuel4@gmail.com", href: "mailto:sereroemmanuel4@gmail.com" },
   { label: "WhatsApp", value: "+27 76 533 4475", href: "https://wa.me/0765334475" },
-  { label: "Location", value: "Nelson Mandela Bay, South Africa", href: null },
+  { label: "Location", value: "Johannesburg, South Africa", href: null },
 ];
 
 const inputClass = "w-full bg-black border border-[#4A7FA7]/60 rounded-xl px-4 py-3 text-[#F6FAFD] placeholder-[#B3CFE5]/50 text-sm outline-none focus:border-[#B3CFE5] transition-colors";
@@ -34,7 +34,12 @@ const Contact = () => {
 
     // Open the user's email client. This will not guarantee delivery
     // (user must send from their client) but will prefill the message.
-    window.open(mailto);
+    const opened = window.open(mailto, "_blank");
+    if (!opened) {
+      alert("Please allow popups or use a browser that supports mailto links.");
+      setLoading(false);
+      return;
+    }
 
     setLoading(false);
     setSent(true);
