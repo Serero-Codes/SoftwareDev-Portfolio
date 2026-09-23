@@ -23,15 +23,7 @@ function Particles() {
 
   useFrame(({ clock }) => {
     if (ref.current) {
-      const elapsed = clock.getElapsedTime();
-      ref.current.rotation.y = elapsed * 0.05;
-
-      const blend = (Math.sin(elapsed * 0.2) + 1) / 2;
-      ref.current.material.color.lerpColors(colorA, colorB, blend);
-
-      const flicker = Math.max(0.05, Math.sin(elapsed * 4) * 0.5 + 0.5);
-      ref.current.material.opacity = 0.15 + flicker * 0.55;
-      ref.current.material.size = 0.02 + flicker * 0.015;
+      ref.current.rotation.y = clock.getElapsedTime() * 0.05;
     }
   });
 

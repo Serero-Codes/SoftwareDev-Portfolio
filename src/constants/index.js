@@ -36,17 +36,17 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "Software Developer",
-    company_name: "CapaCiTi",
-    icon: "SD",
+    title: "Cloud Engineer & Full-Stack Developer",
+    company_name: "UVU Africa (CapaCiTi)",
+    icon: "CE",
     iconBg: "#4A7FA7",
     date: "April 2026 - Present",
     points: [
-      "Building full-stack solutions and deploying them on AWS and Azure cloud platforms.",
-      "Practicing Agile/Scrum development methodologies to deliver software efficiently.",
-      "Studying machine learning fundamentals with Python, scikit-learn, and TensorFlow.",
+      "Building full-stack solutions and deploying them on AWS cloud platforms.",
+      "Building Cloud Infrastructure as Code (IaC) using AWS CloudFormation and Terraform.",
+      "Building Serverless applications using AWS Lambda, API Gateway, and DynamoDB.",
+      "Building and deploying containerized applications using Docker and Kubernetes.",
       "Building intelligent features into existing software applications.",
-      "Exploring natural language processing and computer vision domains.",
       "Applying AI to solve practical software engineering problems.",
     ],
   },
@@ -92,19 +92,58 @@ export const experiences = [
 ];
 
 export const certifications = [
+  "SFIA AWS Cloud Solutions Architect Professional Certificate (Coursera)",
+  "Architecting Solutions on AWS (Coursera)",
+  "Cloud Architecture Design Patterns (Coursera)",
   "Generative AI with Large Language Models (AWS DeepLearning.AI)",
   "Supervised Machine Learning: Regression and Classification (Stanford University DeepLearning.AI)",
   "Unsupervised Learning, Recommenders, Reinforcement Learning (Stanford University DeepLearning.AI)",
-  "AI for Everyone (DeepLearning.AI)",
   "Python for Data Science, AI Development (IBM)",
   "Generative AI: Prompt Engineering Basics (IBM)",
   "Introduction to Artificial Intelligence (AI) (IBM)",
-  "Introduction to Generative AI (Google Cloud)",
   "Azure Fundamentals (AZ-900) (Microsoft)",
-  "Currently studying: Azure Administrator (AZ-104)",
 ];
 
 export const projects = [
+  
+  {
+    name: "3-tier AWS infrastructure",
+    description:
+      "Infrastructure as Code (IaC) using Terraform to deploy a secure, auto-scaling 3-tier AWS architecture hosting a containerized contact book application with full CRUD functionality. The design enforces strict network isolation using a custom VPC with public and private subnets, an Application Load Balancer, and an RDS PostgreSQL database. Security is prioritized through security group chaining and zero-trust AWS SSM access for keyless CI/CD deployments",
+    tags: [
+      { name: "Flask", color: "green-text-gradient" },
+      { name: "JavaScript", color: "pink-text-gradient" },
+      {name: "Python", color: "green-text-gradient" },
+      { name: "SQL", color: "blue-text-gradient" },
+      { name: "Docker", color: "blue-text-gradient" },
+      { name: "Pg4Admin", color: "blue-text-gradient" },
+      { name: "Terraform", color: "blue-text-gradient" },
+      { name: "AWS", color: "green-text-gradient" },
+
+    ],
+    previewColor: "#0A1931",
+    source_code_link: "https://github.com/Serero-Codes/contact-Book-infrastructure",
+    live_demo_link: "https://github.com/Serero-Codes/contact-Book-infrastructure",
+  },
+  {
+    name: "ticketless-parking",
+    description:
+    "An end-to-end serverless ticketless parking system built on AWS and deployed within a secure VPC. The architecture leverages API Gateway and S3 for direct image uploads, which trigger AWS Lambda and Amazon Rekognition to perform instant license plate OCR. The system seamlessly manages the entire parking lifecycle—from entry logging to automated exit fee calculation—using a managed Amazon RDS PostgreSQL database, completely eliminating the need for physical tickets or on-premise servers",
+      tags: [
+      { name: "Flask", color: "green-text-gradient" },
+      { name: "S3", color: "pink-text-gradient" },
+      { name: "AWS API", color: "blue-text-gradient" },
+      { name: "Lambda", color: "green-text-gradient" },
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "Rekognition", color: "pink-text-gradient" },
+      { name: "PostgreSQL", color: "blue-text-gradient" },
+      { name: "Serverless", color: "green-text-gradient" },
+      { name: "OCR", color: "pink-text-gradient" },
+    ],
+    previewColor: "#0A1931",
+    source_code_link: "https://github.com/Serero-Codes/ticketless-parking",
+    live_demo_link: "https://github.com/Serero-Codes/ticketless-parking",
+  },
   {
     name: "Smart Ticket Management",
     description:
